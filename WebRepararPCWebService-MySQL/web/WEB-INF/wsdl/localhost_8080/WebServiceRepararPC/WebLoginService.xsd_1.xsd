@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Service.RepararPC.Burgos.Cl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Service.RepararPC.Burgos.Cl/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="actualizarLogin" type="tns:actualizarLogin"/>
+
+<xs:element name="actualizarLoginResponse" type="tns:actualizarLoginResponse"/>
+
+<xs:element name="buscarIdLogin" type="tns:buscarIdLogin"/>
+
+<xs:element name="buscarIdLoginResponse" type="tns:buscarIdLoginResponse"/>
+
+<xs:element name="buscarRutLogin" type="tns:buscarRutLogin"/>
+
+<xs:element name="buscarRutLoginR" type="tns:buscarRutLoginR"/>
+
+<xs:element name="buscarRutLoginRResponse" type="tns:buscarRutLoginRResponse"/>
+
+<xs:element name="buscarRutLoginResponse" type="tns:buscarRutLoginResponse"/>
+
+<xs:element name="eliminarLogin" type="tns:eliminarLogin"/>
+
+<xs:element name="eliminarLoginResponse" type="tns:eliminarLoginResponse"/>
+
+<xs:element name="insertarLogin" type="tns:insertarLogin"/>
+
+<xs:element name="insertarLoginResponse" type="tns:insertarLoginResponse"/>
+
+<xs:element name="listaLoginAll" type="tns:listaLoginAll"/>
+
+<xs:element name="listaLoginAllResponse" type="tns:listaLoginAllResponse"/>
+
+<xs:element name="validarLogin" type="tns:validarLogin"/>
+
+<xs:element name="validarLoginResponse" type="tns:validarLoginResponse"/>
+
+<xs:complexType name="listaLoginAll">
+<xs:sequence>
+<xs:element name="intDesde" type="xs:long"/>
+<xs:element name="intCuantos" type="xs:long"/>
+<xs:element name="strBusqueda" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaLoginAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clLogin" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clLogin">
+<xs:sequence>
+<xs:element name="apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="celular" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="passworld" type="xs:string" minOccurs="0"/>
+<xs:element name="rut" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoLogin" type="tns:tipoLogin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarIdLogin">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarIdLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validarLogin">
+<xs:sequence>
+<xs:element name="rut" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validarLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarLogin">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarLogin">
+<xs:sequence>
+<xs:element name="rut" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="celular" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoLogin" type="tns:tipoLogin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarLogin">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="rut" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="celular" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoLogin" type="tns:tipoLogin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarRutLoginR">
+<xs:sequence>
+<xs:element name="rut" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarRutLoginRResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarRutLogin">
+<xs:sequence>
+<xs:element name="rut" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarRutLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clLogin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="tipoLogin">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Administrador"/>
+<xs:enumeration value="Usuario"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

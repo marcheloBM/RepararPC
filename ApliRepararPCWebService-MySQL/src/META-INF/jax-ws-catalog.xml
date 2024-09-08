@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/WebServiceRepararPC/WebLoginService?wsdl" uri="wsdl/localhost_8080/WebServiceRepararPC/WebLoginService.wsdl"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC/WebLoginService?WSDL" uri="wsdl/localhost_8080/WebServiceRepararPC/WebLoginService.wsdl"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC/WebLoginService?xsd=1" uri="wsdl/localhost_8080/WebServiceRepararPC/WebLoginService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC/WebClienteService?WSDL" uri="wsdl/localhost_8080/WebServiceRepararPC/WebClienteService.wsdl"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC/WebClienteService?xsd=1" uri="wsdl/localhost_8080/WebServiceRepararPC/WebClienteService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC/WebPCService?WSDL" uri="wsdl/localhost_8080/WebServiceRepararPC/WebPCService.wsdl"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC/WebPCService?xsd=1" uri="wsdl/localhost_8080/WebServiceRepararPC/WebPCService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebLoginService?WSDL" uri="wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebLoginService.wsdl"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebLoginService?wsdl" uri="wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebLoginService.wsdl"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebLoginService?xsd=1" uri="wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebLoginService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebClienteService?wsdl" uri="wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebClienteService.wsdl"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebClienteService?xsd=1" uri="wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebClienteService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebPCService?wsdl" uri="wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebPCService.wsdl"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebPCService?xsd=1" uri="wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebPCService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebLoginService" uri="wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/webloginservice"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebClienteService?WSDL" uri="wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebClienteService.wsdl"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebPCService?WSDL" uri="wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebPCService.wsdl"/>
+</catalog>

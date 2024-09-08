@@ -1,0 +1,9 @@
+Pruebas
+http://localhost:8080/WebServiceRepararPC/WebLoginService?tester
+http://localhost:8080/WebServiceRepararPC/WebClienteService?tester
+http://localhost:8080/WebServiceRepararPC/WebPCService?tester
+
+Implementacion
+http://localhost:8080/WebServiceRepararPC/WebLoginService?WSDL
+http://localhost:8080/WebServiceRepararPC/WebClienteService?WSDL
+http://localhost:8080/WebServiceRepararPC/WebPCService?WSDL

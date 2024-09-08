@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-WebLoginService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/WebLoginService"/>
+        <property name="wsdl-WebLoginService" location="xml-resources/web-service-references/WebLoginService/wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebLoginService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WebLoginService" destdir="${build.generated.dir}/jax-wsCache/WebLoginService" wsdl="${wsdl-WebLoginService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebLoginService?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-WebLoginService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/WebLoginService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/WebLoginService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-WebLoginService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/WebLoginService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/cl/burgos/repararpc/service"/>
+    </target>
+    <target name="wsimport-client-WebClienteService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/WebClienteService"/>
+        <property name="wsdl-WebClienteService" location="xml-resources/web-service-references/WebClienteService/wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebClienteService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WebClienteService" destdir="${build.generated.dir}/jax-wsCache/WebClienteService" wsdl="${wsdl-WebClienteService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebClienteService?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-WebClienteService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/WebClienteService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/WebClienteService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-WebClienteService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/WebClienteService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/cl/burgos/repararpc/service"/>
+    </target>
+    <target name="wsimport-client-WebPCService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/WebPCService"/>
+        <property name="wsdl-WebPCService" location="xml-resources/web-service-references/WebPCService/wsdl/localhost_8080/WebServiceRepararPC-MySQLV.1/WebPCService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WebPCService" destdir="${build.generated.dir}/jax-wsCache/WebPCService" wsdl="${wsdl-WebPCService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/WebServiceRepararPC-MySQLV.1/WebPCService?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-WebPCService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/WebPCService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/WebPCService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-WebPCService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/WebPCService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/cl/burgos/repararpc/service"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-WebLoginService, wsimport-client-WebClienteService, wsimport-client-WebPCService"/>
+</project>

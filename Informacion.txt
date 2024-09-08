@@ -1,0 +1,44 @@
+Contenido del proyecto
+
+-ApliRepararPC-Access
+	v1.1 Proyecto ya funcionando
+	v1.2 Implementacion de registro de pc para control de uso del programa
+	v1.3 Eliminación de campos de RAM, HDD y Versión
+	v1.4 Orden de la interfaz y cambio en los campos
+	v1.5 Implementación de archivos y informes del pc
+	v1.6 Cambios en la interfaz de home y en gestión de archivos y la eliminación del campo detalle
+	v1.7 Implementación de programas para la creación de reportes con sus respectivas imágenes para el manejo
+	
+-LibRepararPC-MySQL
+	v1.0 Librerías de RepararPC con BD, DAO, ENT, EXP, ENUM, FUN, INTER, SQL En su primera fase
+	v1.1 Implementación del Log4j
+	v1.2 Modificaciones para implementar en la WEB
+	v1.3 Implementación del Web service
+	v1.4 Cambio de nombre al proyecto
+	
+-ApliRepararPC-MySQL
+	v1.0 Aplicación Terminada en su primera fase
+	v1.1 Implementación del Log4j
+	v1.2 Cambios menores al código
+	v1.3 Cambio de nombre al proyecto
+
+-WebServiceRepararPC-MySQL
+	v1.0 Implementación del Web service
+	v1.2 Cambio de nombre al proyecto
+	
+-ApliRepararPCWebService-MySQL
+	v1.0 Aplicación Con WebService
+	v1.1 Actualización de los WS
+	v1.2 Cambio de nombre al proyecto
+
+-WebRepararPC-MySQL
+	v1.0 registro de login y inicio sin terminar
+	v1.1 Terminada en su primera fase
+	v1.2 Cambio de nombre al proyecto
+	
+-WebRepararPCWebService-MySQL
+	v1.0 Web Con WebService
+	v1.1 Actualización de los WS
+	v1.2 Implementación del WS v1.1
+	v1.3 Cambio de nombre al proyecto
+	v1.4 Cambio de nombre al proyecto
