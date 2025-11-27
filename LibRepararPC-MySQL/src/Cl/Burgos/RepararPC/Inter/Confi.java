@@ -10,9 +10,13 @@ package Cl.Burgos.RepararPC.Inter;
  * @author march
  */
 public interface Confi {
+        //Configuracion Nuevo Update
+    static String repositorio = "https://github.com/marcheloBM/RepararPC";
+    static String versionActual = "1.2";
+    
     //Configuracion de BD localhot
     //Para mySQL
-    String DriverBD="com.mysql.jdbc.Driver";
+    String DriverBD="com.mysql.cj.jdbc.Driver";
     //Para Oracle
 //    String DriverBD="oracle.jdbc.OracleDriver";
     String ip="localhost";
@@ -20,19 +24,8 @@ public interface Confi {
     String BaseDatos="RepararPC";
     String userBD="root";
     String passBD="";
-    // BD Windows 7
-//    String ip="192.168.1.84";
-//    String puerto="3306";
-//    String BaseDatos="RepararPC";
-//    String userBD="marchelo";
-//    String passBD="HP2117la";
-    // BD Servidor
-//    String ip="10.20.30.1";
-//    String puerto="3306";
-//    String BaseDatos="RepararPC";
-//    String userBD="marchelo";
-//    String passBD="HP2117la";
-//    
+    
+    
     //Configuracion de Log
     String nameLog="LogGeneral.log";
     //Configuracion del Log4j
@@ -40,18 +33,24 @@ public interface Confi {
     String nameLog4jLib="Log4jLib.log";
     String nameLog4jApli="Log4jApli.log";
     // Ubicacion del los Archivos
-    static String urlDirec="C:\\Users\\march\\RepararPC\\";
+    static String urlDirec="D:\\RepararPC\\";
     
     //Configuracion de Directorio
     static String carpeta = "RepararPC";
     static String SO = System.getProperty("os.name");
-    static String userDir = System.getProperty("user.home");
+//    static String userDir = System.getProperty("user.home");
+    static String userDir = "D:\\";
         
     //Prueba Login
-    String loginUsep="170088646";
-    String loginPasp="HP2117la";
+    //final
+    String loginUsep="";
+    String loginPasp="";
+    //Administrador
 //    String loginUsep="111111111";
-//    String loginPasp="admin";
+//    String loginPasp="prueba";
+    //Usuario
+//    String loginUsep="222222222";
+//    String loginPasp="prueba";
     
     //Cliente
     String clienteRut="24021829-1";

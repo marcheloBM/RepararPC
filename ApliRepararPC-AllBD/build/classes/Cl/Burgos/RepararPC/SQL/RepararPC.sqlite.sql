@@ -53,4 +53,7 @@ CREATE TABLE IF NOT EXISTS "registropc" (
 	"activo"	TEXT,
 	PRIMARY KEY("IdRegistropc" AUTOINCREMENT)
 );
+INSERT INTO "login" ("IdLogin","rut","nombre","apellido","correo","celular","password","tipo") VALUES 
+ (1,'11.111.111-1','Administrador','Administrador','Administrador@prueba.cl','999999999','c893bad68927b457dbed39460e6afd62','Administrador'),
+ (2,'22.222.222-2','Usuario','Usuario','admin@admin.com','111111111','c893bad68927b457dbed39460e6afd62','Usuario');
 COMMIT;

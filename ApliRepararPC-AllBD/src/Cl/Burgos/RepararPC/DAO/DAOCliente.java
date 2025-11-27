@@ -137,29 +137,26 @@ public class DAOCliente implements ClienteInter{
 //Revisar esto Codigo
 //    @Override
     //Metodo Sin Funcionar
-    public void llenarCombo(JComboBox Combo) {
+    public void llenarCombo(JComboBox<String> combo) {
         String strConsulta;
-        String datos[]=new String [1];
-        int intDesde=0;
-        int intCuantos=1000;
-        String strBusqueda="";
-        strConsulta="call ProClienteListarAll("+intDesde+","+intCuantos+",'"+strBusqueda+"');";
-      
-        try{
-         ResultSet rs=BD.getInstance().sqlSelect(strConsulta);
-         
-         while(rs.next()){
-             
-//              datos[0]=String.format("%1$04d",rs.getInt("idCliente"),rs.getInt("idCliente")).toString();
-              datos[0]=rs.getString("nombre");
-              
-              Combo.addItem(datos[0]);
+        int intDesde = 0;
+        int intCuantos = 1000;
+        String strBusqueda = "";
+        strConsulta = "call ProClienteListarAll(" + intDesde + "," + intCuantos + ",'" + strBusqueda + "');";
+
+        try {
+            ResultSet rs = BD.getInstance().sqlSelect(strConsulta);
+
+            while (rs.next()) {
+                String nombre = rs.getString("nombre");
+                combo.addItem(nombre);  // ahora sin warning
             }
             rs.close();
-            }catch(SQLException e){
-                System.out.println(e);
-                }
-    }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+}
+
     //Revisar esto Codigo
     @Override
     public List<ClCliente> leerClientesRut() {

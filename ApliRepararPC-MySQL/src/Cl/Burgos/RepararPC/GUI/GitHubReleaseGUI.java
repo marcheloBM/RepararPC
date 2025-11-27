@@ -1,7 +1,7 @@
 package Cl.Burgos.RepararPC.GUI;
 
-import Cl.Burgos.RepararPC.Conf.*;
-import Cl.Burgos.RepararPC.FUN.*;
+import Cl.Burgos.RepararPC.Inter.*;
+import Cl.Burgos.RepararPC.Log4j.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

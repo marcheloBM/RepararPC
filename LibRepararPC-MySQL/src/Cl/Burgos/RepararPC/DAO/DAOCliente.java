@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JComboBox;
 import javax.swing.table.DefaultTableModel;
+import java.sql.ResultSetMetaData;
 import org.apache.log4j.Logger;
 
 /**
@@ -139,29 +140,25 @@ public class DAOCliente implements ClienteInter{
 
 //    @Override
     //Metodo Sin Funcionar
-    public void llenarCombo(JComboBox Combo) {
+    public void llenarCombo(JComboBox<String> combo) {
         String strConsulta;
-        String datos[]=new String [1];
-        int intDesde=0;
-        int intCuantos=1000;
-        String strBusqueda="";
-        strConsulta="call ProClienteListarAll("+intDesde+","+intCuantos+",'"+strBusqueda+"');";
-      
-        try{
-         ResultSet rs=BD.getInstance().sqlSelect(strConsulta);
-         
-         while(rs.next()){
-             
-//              datos[0]=String.format("%1$04d",rs.getInt("idCliente"),rs.getInt("idCliente")).toString();
-              datos[0]=rs.getString("rut");
-              
-              Combo.addItem(datos[0]);
+        int intDesde = 0;
+        int intCuantos = 1000;
+        String strBusqueda = "";
+        strConsulta = "call ProClienteListarAll(" + intDesde + "," + intCuantos + ",'" + strBusqueda + "');";
+
+        try {
+            ResultSet rs = BD.getInstance().sqlSelect(strConsulta);
+
+            while (rs.next()) {
+                String nombre = rs.getString("nombre");
+                combo.addItem(nombre);  // ahora sin warning
             }
             rs.close();
-            }catch(SQLException e){
-                System.out.println(e);
-                }
-    }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+}
     
     @Override
     public List<ClCliente> leerClientesRut() {
@@ -252,31 +249,26 @@ public class DAOCliente implements ClienteInter{
     
     @Override
     public void leerClientes(long intDesde, long intCuantos, DefaultTableModel tablaClientes, String strBusqueda) {
-        String strConsulta;
-        String datos[]=new String [7];
-      
-        strConsulta="call ProClienteListarAll("+intDesde+","+intCuantos+",'"+strBusqueda+"');";
-      
-        try{
-         ResultSet rs=BD.getInstance().sqlSelect(strConsulta);
-         
-         while(rs.next()){
-//              System.out.println(rs.getString("Nombres"));
-              datos[0]=rs.getString(1);
-              datos[1]=rs.getString(2);
-              datos[2]=rs.getString(3);
-              datos[3]=rs.getString(4);
-              datos[4]=rs.getString(5);
-              datos[5]=rs.getString(6);
-              datos[6]=rs.getString(7);
-              
-              tablaClientes.addRow(datos);
-         }
-         rs.close();
-          }catch(SQLException e){
-              Log.log(e.getMessage());
-              log.info(e.getMessage());
-          }
+        String strConsulta = "call ProClienteListarAll(" + intDesde + "," + intCuantos + ",'" + strBusqueda + "');";
+
+        try {
+            ResultSet rs = BD.getInstance().sqlSelect(strConsulta);
+            ResultSetMetaData meta = rs.getMetaData();
+            int columnas = meta.getColumnCount();
+
+            while (rs.next()) {
+                String[] datos = new String[columnas];
+                for (int i = 0; i < columnas; i++) {
+                    datos[i] = rs.getString(i + 1); // ResultSet es 1-based
+                }
+                tablaClientes.addRow(datos);
+            }
+
+            rs.close();
+        } catch (SQLException e) {
+            Log.log(e.getMessage());
+            log.info(e.getMessage());
+        }
     }
 
     @Override

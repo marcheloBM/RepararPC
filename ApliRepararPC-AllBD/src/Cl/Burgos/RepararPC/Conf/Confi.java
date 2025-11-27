@@ -12,7 +12,7 @@ package Cl.Burgos.RepararPC.Conf;
 public interface Confi { 
     //Configuracion Nuevo Update
     static String repositorio = "https://github.com/marcheloBM/RepararPC";
-    static String versionActual = "1.1";
+    static String versionActual = "1.2";
 /*
 *   Configuracion de BD localhost 
 *   Para mySQL - Oracle - Access - SqlServer 
@@ -36,19 +36,6 @@ public interface Confi {
     String userBD="";
     String passBD="";
     
-    /* Configuraciones Sql Server*/
-//    String ipBD="localhost";
-//    String puertoBD="1433";
-//    String BaseDatosBD="RepararPC";
-//    String userBD="root";
-//    String passBD="";
-    
-    /* Configuraciones Oracle*/
-//    String ipBD="localhost";
-//    String puertoBD="1521";
-//    String BaseDatosBD="RepararPC";
-//    String userBD="HALCONE";
-//    String passBD="123";
     
      //Configuracion de Log
     String nameLog="LogGeneral.log";
@@ -68,10 +55,15 @@ public interface Confi {
     static String userProgra = System.getProperty("user.dir");
         
     //Prueba Login
-    String loginUsep="170088646";
-    String loginPasp="prueba";
+    //final
+    String loginUsep="";
+    String loginPasp="";
+    //Administrador
 //    String loginUsep="111111111";
-//    String loginPasp="admin";
+//    String loginPasp="prueba";
+    //Usuario
+//    String loginUsep="222222222";
+//    String loginPasp="prueba";
     
     //Cliente
     String clienteRut="24021829-1";

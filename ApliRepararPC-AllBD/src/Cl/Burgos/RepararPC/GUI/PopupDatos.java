@@ -326,23 +326,22 @@ public class PopupDatos extends javax.swing.JDialog {
         if(file.exists())return file;else return null;
     }
 
-   private ArrayList readFileConfig(File file){
-       ArrayList datos = new ArrayList();
-       try{
-           File fstream = file;
-           BufferedReader br = new BufferedReader(new FileReader(fstream));
-           String strLine;
-           //Leyendo archivo linea por linea
-           while ((strLine = br.readLine()) != null){ 
-               //data = strLine;
-               datos.add(strLine);
-           }
-            //cerrando el flujo de entrada
+   private ArrayList<String> readFileConfig(File file) {
+        ArrayList<String> datos = new ArrayList<>();
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String strLine;
+            // Leyendo archivo línea por línea
+            while ((strLine = br.readLine()) != null) {
+                datos.add(strLine);  // ahora sin warning
+            }
+            // cerrando el flujo de entrada
             br.close();
-            }catch (Exception e){System.err.println("Error: " + e.getMessage());}
-            //System.out.println(data);
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+        }
         return datos;
-   }
+    }
     /**
      * @param args the command line arguments
      */

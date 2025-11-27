@@ -25,7 +25,8 @@ public class ComandosCMD {
         try{
             
             // Ejecucion Basica del Comando
-            Process proceso = Runtime.getRuntime().exec(comando);
+            ProcessBuilder pb = new ProcessBuilder(comando.split(" "));
+            Process proceso = pb.start();
  
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(proceso.getInputStream()));
             BufferedReader stdError = new BufferedReader(new InputStreamReader(proceso.getErrorStream()));

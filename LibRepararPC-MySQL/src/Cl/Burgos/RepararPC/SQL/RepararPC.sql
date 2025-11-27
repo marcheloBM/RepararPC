@@ -187,6 +187,32 @@ END$$
 DELIMITER ;
 
 -- -----------------------------------------------------
+-- procedure ProClienteBuscarIdLogin
+-- -----------------------------------------------------
+
+USE `RepararPC`;
+DROP procedure IF EXISTS `RepararPC`.`ProClienteBuscarIdLogin`;
+
+DELIMITER $$
+USE `RepararPC`$$
+CREATE PROCEDURE `ProClienteBuscarIdLogin` (in ID int)
+reads sql data
+BEGIN
+select idCliente,
+rut,
+nombre,
+apellido,
+correo,
+celular,
+Login_idLogin
+from
+`Cliente`
+where Login_idLogin=ID;
+END$$
+
+DELIMITER ;
+
+-- -----------------------------------------------------
 -- procedure ProClienteListarAll
 -- -----------------------------------------------------
 
@@ -822,3 +848,7 @@ GRANT ALL ON `RepararPC`.* TO 'marchelo'@'localhost';
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+INSERT INTO `RepararPC`.`Login` (`idLogin`, `rut`, `nombre`, `apellido`, `correo`, `celular`, `passworld`, `tipo`) VALUES (1, '22.222.222-2', 'Usuario', 'Usuario', 'Usuario@live.cl', '999999999', '729c35493e6b8e990aaaddc2a52d02c1', 'Usuario');
+INSERT INTO `RepararPC`.`Login` (`idLogin`, `rut`, `nombre`, `apellido`, `correo`, `celular`, `passworld`, `tipo`) VALUES (2, '11.111.111-1', 'Administrador', 'Administrador', 'admin@admin.cl', '111111111', '21232f297a57a5a743894a0e4a801fc3', 'Administrador');
+INSERT INTO `cliente` (`idCliente`, `rut`, `nombre`, `apellido`, `correo`, `celular`, `Login_idLogin`) VALUES (1, '33.333.333-3', 'prueba', 'prueba', 'prueba@live.cl', '999999999', '1');
