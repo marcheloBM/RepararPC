@@ -1,0 +1,6 @@
+Cl\Burgos\RepararPC\Controlador\ServletLogin.class
+Cl\Burgos\RepararPC\Log4j\Log.class
+Cl\Burgos\RepararPC\Controlador\ServletPC.class
+com\mycompany\webrepararpc\JakartaRestConfiguration.class
+com\mycompany\webrepararpc\resources\JakartaEE10Resource.class
+Cl\Burgos\RepararPC\Controlador\ServletCliente.class
