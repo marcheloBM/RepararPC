@@ -12,7 +12,7 @@ package Cl.Burgos.RepararPC.Conf;
 public interface Confi { 
     //Configuracion Nuevo Update
     static String repositorio = "https://github.com/marcheloBM/RepararPC";
-    static String versionActual = "1.2";
+    static String versionActual = "1.3";
 /*
 *   Configuracion de BD localhost 
 *   Para mySQL - Oracle - Access - SqlServer 

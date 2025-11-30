@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="WebLoginService">
-      <implementation-class>Cl.Burgos.RepararPC.Service.WebLoginService</implementation-class>
-    </service>
-    <service name="WebClienteService">
-      <implementation-class>Cl.Burgos.RepararPC.Service.WebClienteService</implementation-class>
-    </service>
-    <service name="WebPCService">
-      <implementation-class>Cl.Burgos.RepararPC.Service.WebPCService</implementation-class>
-    </service>
   </services>
   <clients/>
 </jax-ws>

@@ -12,7 +12,7 @@ package Cl.Burgos.RepararPC.Inter;
 public interface Confi {
         //Configuracion Nuevo Update
     static String repositorio = "https://github.com/marcheloBM/RepararPC";
-    static String versionActual = "1.2";
+    static String versionActual = "1.3";
     
     //Configuracion de BD localhot
     //Para mySQL
@@ -43,11 +43,11 @@ public interface Confi {
         
     //Prueba Login
     //final
-    String loginUsep="";
-    String loginPasp="";
+//    String loginUsep="";
+//    String loginPasp="";
     //Administrador
-//    String loginUsep="111111111";
-//    String loginPasp="prueba";
+    String loginUsep="111111111";
+    String loginPasp="prueba";
     //Usuario
 //    String loginUsep="222222222";
 //    String loginPasp="prueba";

@@ -2,4 +2,5 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:8080/WebServiceRepararPC/WebLoginService?WSDL" uri="src/conf/xml-resources/web-service-references/WebLoginService/wsdl/localhost_8080/WebServiceRepararPC/WebLoginService.wsdl"/>
     <system systemId="http://localhost:8080/WebServiceRepararPC/WebLoginService?xsd=1" uri="src/conf/xml-resources/web-service-references/WebLoginService/wsdl/localhost_8080/WebServiceRepararPC/WebLoginService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WebServiceRepararPC-MySQL/" uri="src/conf/xml-resources/web-service-references/WsClient/wsdl/localhost_8080/WebServiceRepararPC-MySQL/index"/>
 </catalog>
